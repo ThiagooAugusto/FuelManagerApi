@@ -35,10 +35,11 @@ namespace FuelManagerApi.Repository
             return _context.Set<T>().ToList();
         }
 
-        public void Update(T entity)
+        public T Update(T entity)
         {
             _context.Set<T>().Update(entity);
             _context.SaveChanges();
+            return entity;
         }
     }
 }

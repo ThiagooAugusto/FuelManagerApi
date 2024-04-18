@@ -11,6 +11,9 @@ namespace FuelManagerApi.Mappings
         public MappingProfile()
         {
             CreateMap<VeiculoDTO,Veiculo>().ReverseMap();
+            CreateMap<VeiculoDTOCreate, Veiculo>().ReverseMap();
+            CreateMap<VeiculoDTOUpdate, Veiculo>().ReverseMap();
+            CreateMap<Veiculo, VeiculoDTOUpdateResult>();
             CreateMap<ConsumoDTO, Consumo>().ReverseMap();
         }
     }
