@@ -1,0 +1,17 @@
+﻿using AutoMapper;
+using FuelManagerApi.Models;
+using FuelManagerApi.Models.DTO.ConsumoDTO;
+using FuelManagerApi.Models.DTO.VeiculoDTO;
+using System.Runtime.InteropServices;
+
+namespace FuelManagerApi.Mappings
+{
+    public class MappingProfile:Profile
+    {
+        public MappingProfile()
+        {
+            CreateMap<VeiculoDTO,Veiculo>().ReverseMap();
+            CreateMap<ConsumoDTO, Consumo>().ReverseMap();
+        }
+    }
+}
