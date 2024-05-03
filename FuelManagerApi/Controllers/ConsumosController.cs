@@ -46,6 +46,7 @@ namespace FuelManagerApi.Controllers
                 return NotFound();
             }
             var result = _mapper.Map<ConsumoDTO>(consumo);
+           
             return Ok(result);
         }
 

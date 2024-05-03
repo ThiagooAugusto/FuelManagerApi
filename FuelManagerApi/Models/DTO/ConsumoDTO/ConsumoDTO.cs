@@ -1,4 +1,6 @@
-﻿namespace FuelManagerApi.Models.DTO.ConsumoDTO
+﻿
+
+namespace FuelManagerApi.Models.DTO.ConsumoDTO
 {
     public class ConsumoDTO
     {
@@ -6,6 +8,7 @@
         public string Descricao { get; set; }
         public DateTime Data { get; set; }
         public decimal Valor { get; set; }
+
         public TipoCombustivel TipoCombustivel { get; set; }
         public int VeiculoId { get; set; }
     }
