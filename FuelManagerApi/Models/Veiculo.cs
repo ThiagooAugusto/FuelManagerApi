@@ -13,13 +13,13 @@ namespace FuelManagerApi.Models
         [StringLength(20)]
         public string Modelo {  get; set; }
         [Required]
-        [StringLength(7,ErrorMessage ="Máximo de 7 caracteres!")]
+        [StringLength(7)]
         public string Placa {  get; set; }
         [Required]
-        [Range(1900,2024,ErrorMessage ="Ano de fabricação inválido!")]
+        [Range(1900,2024)]
         public int AnoFabricacao {  get; set; }
         [Required]
-        [Range(1900, 2024, ErrorMessage = "Ano do modelo inválido!")]
+        [Range(1900, 2024)]
         public int AnoModelo {  get; set; }
 
         public ICollection<Consumo> Consumos { get; set; }
