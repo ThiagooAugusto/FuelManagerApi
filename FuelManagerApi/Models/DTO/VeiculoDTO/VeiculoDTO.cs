@@ -1,6 +1,6 @@
 ﻿namespace FuelManagerApi.Models.DTO.VeiculoDTO
 {
-    public class VeiculoDTO
+    public class VeiculoDTO:LinksHATEOS
     {
         public int Id { get; set; }
         public string Marca {  get; set; }

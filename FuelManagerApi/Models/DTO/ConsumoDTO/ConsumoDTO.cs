@@ -2,7 +2,7 @@
 
 namespace FuelManagerApi.Models.DTO.ConsumoDTO
 {
-    public class ConsumoDTO
+    public class ConsumoDTO:LinksHATEOS
     {
         public int Id { get; set; }
         public string Descricao { get; set; }

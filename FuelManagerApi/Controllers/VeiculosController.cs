@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using FuelManagerApi.Models;
+using FuelManagerApi.Models.DTO;
 using FuelManagerApi.Models.DTO.VeiculoDTO;
 using FuelManagerApi.Repository.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -40,6 +41,7 @@ namespace FuelManagerApi.Controllers
                 return NotFound();
             }
             var result = _mapper.Map<VeiculoDTO>(veiculo);
+            GerarLinks(result);
             return Ok(result);
         }
 
@@ -75,6 +77,14 @@ namespace FuelManagerApi.Controllers
                 return NotFound();
             _repository.Delete(veiculoExistente);
             return NoContent();
+        }
+
+        private void GerarLinks(VeiculoDTO model)
+        {
+            model.Links.Add(new LinkDto(model.Id, Url.ActionLink(), rel: "self", metodo: "GET"));
+            model.Links.Add(new LinkDto(model.Id, Url.ActionLink(), rel: "update", metodo: "PUT"));
+            model.Links.Add(new LinkDto(model.Id, Url.ActionLink(), rel: "delete", metodo: "Delete"));
+
         }
     }
 }

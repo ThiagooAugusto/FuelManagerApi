@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using FuelManagerApi.Models;
+using FuelManagerApi.Models.DTO;
 using FuelManagerApi.Models.DTO.ConsumoDTO;
 using FuelManagerApi.Models.DTO.VeiculoDTO;
 using FuelManagerApi.Repository.Interfaces;
@@ -46,7 +47,7 @@ namespace FuelManagerApi.Controllers
                 return NotFound();
             }
             var result = _mapper.Map<ConsumoDTO>(consumo);
-           
+            GerarLinks(result);
             return Ok(result);
         }
 
@@ -92,6 +93,13 @@ namespace FuelManagerApi.Controllers
           if (consumo == null)
                 return NotFound();
           return NoContent();
+
+        }
+        private void GerarLinks(ConsumoDTO model)
+        {
+            model.Links.Add(new LinkDto(model.Id, Url.ActionLink(), rel: "self", metodo: "GET"));
+            model.Links.Add(new LinkDto(model.Id, Url.ActionLink(), rel: "update", metodo: "PUT"));
+            model.Links.Add(new LinkDto(model.Id, Url.ActionLink(), rel: "delete", metodo: "Delete"));
 
         }
     }

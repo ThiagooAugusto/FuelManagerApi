@@ -16,6 +16,9 @@ namespace FuelManagerApi.Models.DTO.ConsumoDTO
         public decimal Valor { get; set; }
         [Required(ErrorMessage = "Obrigatório informar o tipo de combustível!")]
         public TipoCombustivel TipoCombustivel { get; set; }
-       
+
+        [Required(ErrorMessage = "Obrigatório informar o Id do Veiculo!")]
+        public int VeiculoId { get; set; }
+
     }
 }
