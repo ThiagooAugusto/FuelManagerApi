@@ -5,12 +5,14 @@ namespace FuelManagerApi.Models.DTO.UsuarioDTO
 {
     public class UsuarioDTOUpdateResult
     {
-       
+
         public int Id { get; set; }
-       
+
         public string Nome { get; set; }
-       
+
         public string Email { get; set; }
+
+        public  Perfil Perfil{ get; set; }
         
         [JsonIgnore]
         public string Password { get; set; }
