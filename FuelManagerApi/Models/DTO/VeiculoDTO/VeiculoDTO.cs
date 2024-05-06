@@ -10,5 +10,6 @@
         public int AnoModelo { get; set; }
 
         public ICollection<Consumo> Consumos { get; set; }
+        public ICollection<Usuario> Usuarios { get; set; }
     }
 }
