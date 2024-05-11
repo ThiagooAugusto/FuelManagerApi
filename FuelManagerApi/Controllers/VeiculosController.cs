@@ -14,11 +14,15 @@ namespace FuelManagerApi.Controllers
     public class VeiculosController : ControllerBase
     {
         private readonly IBaseRepository<Veiculo> _repository;
+        private readonly IBaseRepository<VeiculoUsuarios> _veiculoUsuariosRepository;
+        private readonly IVeiculosRepository _veiculosRepository;
         private readonly IMapper _mapper;
 
-        public VeiculosController(IBaseRepository<Veiculo> repository, IMapper mapper)
+        public VeiculosController(IBaseRepository<Veiculo> repository,IBaseRepository<VeiculoUsuarios> veiculoUsuariosRepository,IVeiculosRepository veiculosRepository, IMapper mapper)
         {
             _repository = repository;
+            _veiculosRepository = veiculosRepository;
+            _veiculoUsuariosRepository = veiculoUsuariosRepository;
             _mapper = mapper;
         }
 
@@ -33,9 +37,9 @@ namespace FuelManagerApi.Controllers
 
         // GET api/<VeiculosController>/5
         [HttpGet("{id}")]
-        public ActionResult Get(int id)
+        public async Task<ActionResult> Get(int id)
         {
-            var veiculo = _repository.Get(v=>v.Id == id);
+            var veiculo = await _veiculosRepository.GetVeiculoById(id);
             if(veiculo == null)
             {
                 return NotFound();
@@ -52,7 +56,7 @@ namespace FuelManagerApi.Controllers
             var veiculoEntity = _mapper.Map<Veiculo>(veiculo);
             var veiculoCriado = _repository.Add(veiculoEntity);
             var result = _mapper.Map<VeiculoDTO>(veiculoCriado);
-            return new CreatedAtActionResult(nameof(Get),"Veiculos", new { Id = result.Id }, result);
+            return new CreatedAtActionResult(nameof(Get),"Veiculos", new { id = result.Id }, result);
         }
 
         // PUT api/<VeiculosController>/5
@@ -85,6 +89,25 @@ namespace FuelManagerApi.Controllers
             model.Links.Add(new LinkDto(model.Id, Url.ActionLink(), rel: "update", metodo: "PUT"));
             model.Links.Add(new LinkDto(model.Id, Url.ActionLink(), rel: "delete", metodo: "Delete"));
 
+        }
+        [HttpPost("{id}/usuarios")]
+        public ActionResult AdicionarUsuario(int id,[FromBody] VeiculoUsuarios model)
+        {
+           if(id!= model.VeiculoId)
+                return BadRequest();
+            var usuarioAdicionado =  _veiculoUsuariosRepository.Add(model);
+            return new CreatedAtActionResult(nameof(Get), "Veiculos", new { id = model.VeiculoId }, model);
+            
+        }
+
+        [HttpDelete("{id}/usuarios/{usuarioId}")]
+        public  ActionResult RemoverUsuario(int id, int usuarioId)
+        {
+            var model = _veiculoUsuariosRepository.Get(v => v.VeiculoId == id && v.UsuarioId == usuarioId);
+            if(model==null) return NotFound();
+
+            _veiculoUsuariosRepository.Delete(model);
+            return NoContent();
         }
     }
 }

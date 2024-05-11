@@ -6,7 +6,7 @@ namespace FuelManagerApi.Repository
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : class
     {
-        private readonly AppDbContext _context;
+        protected readonly AppDbContext _context;
 
         public BaseRepository(AppDbContext context)
         {

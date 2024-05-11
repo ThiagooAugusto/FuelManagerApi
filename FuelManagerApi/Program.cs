@@ -17,10 +17,13 @@ builder.Services.AddControllers().AddJsonOptions(x =>
 
     // ignore omitted parameters on models to enable optional params (e.g. User update)
     x.JsonSerializerOptions.DefaultIgnoreCondition= System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull;
+
+    x.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
 });
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
 builder.Services.AddTransient(typeof(IBaseRepository<>),typeof(BaseRepository<>));
 builder.Services.AddTransient<IConsumosRepository, ConsumosRepository>();
+builder.Services.AddTransient<IVeiculosRepository, VeiculosRepository>();
 builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
