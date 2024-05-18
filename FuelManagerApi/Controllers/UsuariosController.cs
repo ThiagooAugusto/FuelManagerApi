@@ -5,11 +5,18 @@ using FuelManagerApi.Models.DTO.VeiculoDTO;
 using FuelManagerApi.Repository.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using BCrypt.Net;
+using Microsoft.AspNetCore.Authorization;
+using FuelManagerApi.Models.DTO;
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace FuelManagerApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UsuariosController : ControllerBase
@@ -79,6 +86,37 @@ namespace FuelManagerApi.Controllers
                 return NotFound();
             _repository.Delete(usuarioExistente);
             return NoContent();
+        }
+        [AllowAnonymous]
+        [HttpPost("authenticate")]
+        public IActionResult Authenticate([FromBody] AuthenticateDto model)
+        {
+
+            var usuarioEntity = _repository.Get(u=>model.Id ==  u.Id);
+            if (usuarioEntity == null || !BCrypt.Net.BCrypt.Verify(model.Password,usuarioEntity.Password))
+                return Unauthorized();
+            var jwt = GenerateJwtToken(usuarioEntity);
+            return Ok(new { jwtToken = jwt });
+        }
+        private string GenerateJwtToken(Usuario model)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.ASCII.GetBytes("Ry74cBQva5dThwbwchR9jhbtRFnJxWSZ");
+            var claims = new ClaimsIdentity(new Claim[]
+            {
+                new Claim(ClaimTypes.NameIdentifier, model.Id.ToString()),
+                new Claim(ClaimTypes.Role, model.Perfil.ToString())
+            });
+
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = claims,
+                Expires = DateTime.UtcNow.AddHours(8),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
+                SecurityAlgorithms.HmacSha256Signature)
+            };
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            return tokenHandler.WriteToken(token);
         }
     }
 }

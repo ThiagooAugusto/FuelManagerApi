@@ -4,12 +4,14 @@ using FuelManagerApi.Models.DTO;
 using FuelManagerApi.Models.DTO.ConsumoDTO;
 using FuelManagerApi.Models.DTO.VeiculoDTO;
 using FuelManagerApi.Repository.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace FuelManagerApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ConsumosController : ControllerBase
