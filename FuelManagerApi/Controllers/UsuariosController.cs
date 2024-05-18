@@ -29,7 +29,7 @@ namespace FuelManagerApi.Controllers
             _repository = repository;
             _mapper = mapper;
         }
-        // GET: api/<VeiculosController>
+        // GET: api/<UsuariosController>
         [HttpGet]
         public ActionResult<IEnumerable<UsuarioDTO>> GetAll()
         {
@@ -38,7 +38,8 @@ namespace FuelManagerApi.Controllers
             return Ok(result);
         }
 
-        // GET api/<VeiculosController>/5
+        // GET api/<UsuariosController>/5
+        [Authorize(Roles = "Administrador")]
         [HttpGet("{id}")]
         public ActionResult Get(int id)
         {
@@ -51,7 +52,7 @@ namespace FuelManagerApi.Controllers
             return Ok(result);
         }
 
-        // POST api/<VeiculosController>
+        // POST api/<UsuariosController>
         [HttpPost]
         public IActionResult Post([FromBody] UsuarioDTOCreate model)
         {
@@ -63,7 +64,7 @@ namespace FuelManagerApi.Controllers
             return new CreatedAtActionResult(nameof(Get), "Usuarios", new { Id = result.Id }, result);
         }
 
-        // PUT api/<VeiculosController>/5
+        // PUT api/<UsuariosController>/5
         [HttpPut("{id}")]
         public IActionResult Put(int id, [FromBody] UsuarioDTOUpdate model)
         {
@@ -77,7 +78,7 @@ namespace FuelManagerApi.Controllers
             return Ok(result);
         }
 
-        // DELETE api/<VeiculosController>/5
+        // DELETE api/<UsuariosController>/5
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

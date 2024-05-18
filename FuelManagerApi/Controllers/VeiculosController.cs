@@ -38,6 +38,7 @@ namespace FuelManagerApi.Controllers
         }
 
         // GET api/<VeiculosController>/5
+        [Authorize(Roles = "Administrador")]
         [HttpGet("{id}")]
         public async Task<ActionResult> Get(int id)
         {

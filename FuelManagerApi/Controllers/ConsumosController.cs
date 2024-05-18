@@ -40,6 +40,7 @@ namespace FuelManagerApi.Controllers
         }
 
         // GET api/<ConsumosController>/5
+        [Authorize(Roles = "Administrador")]
         [HttpGet("{id}")]
         public ActionResult Get(int id)
         {
