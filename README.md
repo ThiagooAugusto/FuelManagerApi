@@ -1,4 +1,4 @@
-<strong>Api Rest para gerenciamento de veículos e consumo. A api possui as seguintes funncionalidades:</strong><br>
+<strong>Api Rest para gerenciamento de veículos e consumo. A api possui as seguintes funcionalidades:</strong><br>
 .Crud de Veiculos<br>
 .Crud de Consumos<br>
 .Crud de Usuários<br>
