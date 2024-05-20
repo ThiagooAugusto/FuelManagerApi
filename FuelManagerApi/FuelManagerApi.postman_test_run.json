@@ -1,0 +1,785 @@
+{
+	"id": "7cd0f306-dbf6-4251-b251-6d160a9322f0",
+	"name": "FuelManagerApi",
+	"timestamp": "2024-05-20T15:27:11.861Z",
+	"collection_id": "31875865-ba91fa45-ca9c-4e04-9c9c-cfb16e8913ad",
+	"folder_id": 0,
+	"environment_id": "31875865-6a5e0187-8ad1-47a1-a1ba-ed3afedfe809",
+	"totalPass": 46,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-05-20T15:27:07.942Z",
+	"totalFail": 2,
+	"results": [
+		{
+			"id": "abadc2c5-a1a0-43aa-982b-4f7bb6aacfd5",
+			"name": "api/Veiculos/id",
+			"url": "https://localhost:7278/api/Veiculos/1",
+			"time": 35,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				35
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "a9363265-a978-4533-bfc9-f843748800d8",
+			"name": "api/Veiculos",
+			"url": "https://localhost:7278/api/Veiculos",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 500ms": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 500ms": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "c474a48a-d0d1-492f-a105-d38f333ad3b5",
+			"name": "api/Veiculos",
+			"url": "https://localhost:7278/api/Veiculos",
+			"time": 16,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				16
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "ef196109-2dc0-4022-92b6-b4e9445b8dde",
+			"name": "api/Veiculos/id/usuarios",
+			"url": "https://localhost:7278/api/Veiculos/1/usuarios",
+			"time": 28,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				28
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "92a44d97-d792-472c-851e-124c4b53c345",
+			"name": "api/Veiculos/id/usuarios Copy",
+			"url": "https://localhost:7278/api/Veiculos/1/usuarios/2",
+			"time": 18,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Response status code is 204": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				18
+			],
+			"allTests": [
+				{
+					"Response status code is 204": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "24e60bb0-fffc-48e1-9b1f-d583324e5a43",
+			"name": "api/Veiculos/id",
+			"url": "https://localhost:7278/api/Veiculos/1",
+			"time": 19,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				19
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "ca0b1e8f-7df1-4a21-b347-c183e6da51a2",
+			"name": "api/Veiculos/id",
+			"url": "https://localhost:7278/api/Veiculos/6",
+			"time": 24,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Response status code is 204": true,
+				"Response time is within an acceptable range": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within an acceptable range": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				24
+			],
+			"allTests": [
+				{
+					"Response status code is 204": true,
+					"Response time is within an acceptable range": true
+				}
+			]
+		},
+		{
+			"id": "4e860182-51ab-4d9f-ac8d-48e35705e326",
+			"name": "api/Usuarios/id",
+			"url": "https://localhost:7278/api/Usuarios/2",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Validate the schema of the response body": false
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the schema of the response body": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Validate the schema of the response body": false
+				}
+			]
+		},
+		{
+			"id": "4bbbaa9a-f4eb-4f95-9892-63844d58226b",
+			"name": "api/Usuarios",
+			"url": "https://localhost:7278/api/Usuarios",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields - id, nome, email, perfil, and veiculos": true,
+				"Email is in a valid format": true,
+				"Veiculos array is present and contains expected number of elements": true,
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields - id, nome, email, perfil, and veiculos": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Email is in a valid format": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Veiculos array is present and contains expected number of elements": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields - id, nome, email, perfil, and veiculos": true,
+					"Email is in a valid format": true,
+					"Veiculos array is present and contains expected number of elements": true,
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "12945943-d122-4527-9adc-dc4a92c2b2ce",
+			"name": "api/Usuarios",
+			"url": "https://localhost:7278/api/Usuarios",
+			"time": 299,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields": true,
+				"Response time is less than 500ms": true,
+				"Response JSON has the correct structure": true,
+				"Presence of id, username, email, and avatar fields in the response": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response JSON has the correct structure": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Presence of id, username, email, and avatar fields in the response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				299
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields": true,
+					"Response time is less than 500ms": true,
+					"Response JSON has the correct structure": true,
+					"Presence of id, username, email, and avatar fields in the response": true
+				}
+			]
+		},
+		{
+			"id": "375ad67b-e6d6-494a-9381-fa33a3adccba",
+			"name": "api/authenticate",
+			"url": "https://localhost:7278/api/Usuarios/authenticate",
+			"time": 329,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				329
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "5a46e677-99b1-4140-b49c-15ac330e7217",
+			"name": "api/Usuarios/id",
+			"url": "https://localhost:7278/api/Usuarios/5",
+			"time": 297,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				297
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "6eb5f07e-27c6-4a3a-ad39-e8ec4dc10ec4",
+			"name": "api/Usuarios/id",
+			"url": "https://localhost:7278/api/Usuarios/9",
+			"time": 26,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Response status code is 204": true,
+				"Response time is within an acceptable range": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within an acceptable range": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				26
+			],
+			"allTests": [
+				{
+					"Response status code is 204": true,
+					"Response time is within an acceptable range": true
+				}
+			]
+		},
+		{
+			"id": "d2c7713f-9ba4-41cf-959a-de3cb53a8c0c",
+			"name": "api/Consumos/id",
+			"url": "https://localhost:7278/api/Consumos/1",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "db8e97dc-8f5e-4b4c-bf19-05cd41a67efa",
+			"name": "api/Consumos/consumos/id",
+			"url": "https://localhost:7278/api/Consumos/consumos/1",
+			"time": 13,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				13
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "109d6b4b-80c9-4b4b-8157-f878e40bf9c5",
+			"name": "api/Consumos",
+			"url": "https://localhost:7278/api/Consumos",
+			"time": 8,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 200ms": true,
+				"Verify the presence of required fields in the response": false,
+				"Ensure that the response contains the expected data types": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify the presence of required fields in the response": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Ensure that the response contains the expected data types": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				8
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 200ms": true,
+					"Verify the presence of required fields in the response": false,
+					"Ensure that the response contains the expected data types": true
+				}
+			]
+		},
+		{
+			"id": "6bc5047f-84a0-4141-bfe7-be6057500741",
+			"name": "api/Consumos",
+			"url": "https://localhost:7278/api/Consumos",
+			"time": 15,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Response status code is 201": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Response status code is 201": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "22948eab-b945-4474-a89f-5255c001ab10",
+			"name": "api/Consumos/id",
+			"url": "https://localhost:7278/api/Consumos/1",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 500ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 500ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				14
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 500ms": true
+				}
+			]
+		},
+		{
+			"id": "1570d43b-f5d0-4aec-89ad-5347915f9efc",
+			"name": "api/Consumos/id",
+			"url": "https://localhost:7278/api/Consumos/7",
+			"time": 11,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {
+				"Response status code is 204": true,
+				"Response time is within an acceptable range": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 204": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within an acceptable range": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"Response status code is 204": true,
+					"Response time is within an acceptable range": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1193,
+	"collection": {
+		"requests": [
+			{
+				"id": "abadc2c5-a1a0-43aa-982b-4f7bb6aacfd5",
+				"method": "GET"
+			},
+			{
+				"id": "a9363265-a978-4533-bfc9-f843748800d8",
+				"method": "GET"
+			},
+			{
+				"id": "c474a48a-d0d1-492f-a105-d38f333ad3b5",
+				"method": "POST"
+			},
+			{
+				"id": "ef196109-2dc0-4022-92b6-b4e9445b8dde",
+				"method": "POST"
+			},
+			{
+				"id": "92a44d97-d792-472c-851e-124c4b53c345",
+				"method": "DELETE"
+			},
+			{
+				"id": "24e60bb0-fffc-48e1-9b1f-d583324e5a43",
+				"method": "PUT"
+			},
+			{
+				"id": "ca0b1e8f-7df1-4a21-b347-c183e6da51a2",
+				"method": "DELETE"
+			},
+			{
+				"id": "4e860182-51ab-4d9f-ac8d-48e35705e326",
+				"method": "GET"
+			},
+			{
+				"id": "4bbbaa9a-f4eb-4f95-9892-63844d58226b",
+				"method": "GET"
+			},
+			{
+				"id": "12945943-d122-4527-9adc-dc4a92c2b2ce",
+				"method": "POST"
+			},
+			{
+				"id": "375ad67b-e6d6-494a-9381-fa33a3adccba",
+				"method": "POST"
+			},
+			{
+				"id": "5a46e677-99b1-4140-b49c-15ac330e7217",
+				"method": "PUT"
+			},
+			{
+				"id": "6eb5f07e-27c6-4a3a-ad39-e8ec4dc10ec4",
+				"method": "DELETE"
+			},
+			{
+				"id": "d2c7713f-9ba4-41cf-959a-de3cb53a8c0c",
+				"method": "GET"
+			},
+			{
+				"id": "db8e97dc-8f5e-4b4c-bf19-05cd41a67efa",
+				"method": "GET"
+			},
+			{
+				"id": "109d6b4b-80c9-4b4b-8157-f878e40bf9c5",
+				"method": "GET"
+			},
+			{
+				"id": "6bc5047f-84a0-4141-bfe7-be6057500741",
+				"method": "POST"
+			},
+			{
+				"id": "22948eab-b945-4474-a89f-5255c001ab10",
+				"method": "PUT"
+			},
+			{
+				"id": "1570d43b-f5d0-4aec-89ad-5347915f9efc",
+				"method": "DELETE"
+			}
+		]
+	}
+}
