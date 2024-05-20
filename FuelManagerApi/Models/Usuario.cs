@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace FuelManagerApi.Models
 {
@@ -13,6 +14,7 @@ namespace FuelManagerApi.Models
         [StringLength(50)]
         public string Email { get; set; }
         [Required]
+        [JsonIgnore]
         public string Password {  get; set; }
 
         public Perfil Perfil { get; set; }
